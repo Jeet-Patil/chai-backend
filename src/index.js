@@ -1,13 +1,14 @@
 // require('dotenv').config({path: '.env'})
 import dotenv from "dotenv"
-import connectDB from "./db/index.js"
-import { app } from "./app.js";
-
 dotenv.config({
     path: '.env'
 })
 
+import connectDB from "./db/index.js"
+import { app } from "./app.js";
+
 const PORT = process.env.PORT || 8000;
+console.log(process.env.PORT)
 
 connectDB()
 .then(() => {
@@ -22,6 +23,13 @@ connectDB()
 
 
 
+
+
+
+
+
+//  In package.json
+// "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
 
 /*
 import express from "express"
